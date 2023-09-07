@@ -16,9 +16,8 @@ func Input(str string) (string, error) { // requirements: bufio, fmt, os, string
 
 	user_input, err := reader.ReadString('\n') // Read the input from the user
 	if err != nil {
-		return "", err
+		return "Error: ", err
 	}
 
 	return strings.TrimSpace(user_input), err
 }
-
